@@ -6,7 +6,7 @@ const http = require("http");
 //create host and port private 
 //locale host = private addr. to refer on itself 127.0.0.1
 //only locale avaiable
-const host = 'https://lbbawebtest1.azurewebsites.net';
+const host = 'http://lbbawebtest1.azurewebsites.net';
 
 //Connection on port 8080
 const port = 80;
