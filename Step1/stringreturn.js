@@ -6,7 +6,7 @@ const http = require("http");
 //create host and port private 
 //locale host = private addr. to refer on itself 127.0.0.1
 //only locale avaiable
-const host = 'http://lbbawebtest1.azurewebsites.net';
+//const host = 'http://lbbawebtest1.azurewebsites.net';
 
 //Connection on port 8080
 const port = 80;
@@ -15,7 +15,7 @@ const port = 80;
 
 //RequestListener -> insert HTTP-Request get any Response back
 //function ( Requestobject, Responseobject)
-const requestListener = function (req,res){
+const requestListener = (req,res)=>{
     
     //HTTP-statuscode "200=OK","404=Error"...
     res.setCode(200);
@@ -32,8 +32,13 @@ const requestListener = function (req,res){
 const server = http.createServer(requestListener);
 
 //binding to networkadress with port'n'host and responsefunction, which prints the text to the screen
-server.listen(port,host,() => {
-    console.log('Server is running on http://'+host+':'+port);
+server.listen(port,err => {
+    if (errx){
+        console.log(err);
+    }
+    else{
+        console.log('Server is running on http://'+host+':'+port);
+    }
 });
 
 //node ... .js starts server
