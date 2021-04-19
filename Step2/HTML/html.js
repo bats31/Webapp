@@ -2,7 +2,7 @@
 const http = require("http");
 
 const host = 'https://lbbawebtest1.azurewebsites.net';
-//const port = 80;
+const port = process.env.port || 80;
 
 function sayHello(req,res){
     console.log("We've got a request for " + req.url);
