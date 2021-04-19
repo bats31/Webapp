@@ -6,11 +6,11 @@ var port = process.env.PORT || 8080;
 http.createServer(function (req,res){
     //load data to build the page
     //_dirname = absolut Path
-    fs.readFile("/index.html")
+    fs.readFile("/index.html", function(err,data){
         
-        .then(contents =>{
         res.writeHead(200, {"Content-Type": "text/html"});
-        res.end(contents);
+        res.write(data);
+        res.end();
     })
 
     //if there are any mistakes with reading file it entered the catch case
@@ -19,7 +19,6 @@ http.createServer(function (req,res){
         res.writeHead(500);
         res.err(err);
         return;
-       });
-}).listen(port);
+       })
 
-console.log('Server is running');
+}).listen(port);
