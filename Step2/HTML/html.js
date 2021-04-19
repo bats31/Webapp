@@ -2,7 +2,7 @@
 const http = require("http");
 
 //const host = 'https://lbbawebtest1.azurewebsites.net';
-const port = process.env.PORT || 80;
+const port = process.env.PORT || 800;
 
 http.createServer(function(req,res){
        
