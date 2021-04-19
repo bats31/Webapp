@@ -10,7 +10,7 @@ function sayHello(req,res){
     
     res.statusCode = 200;
     // HTTP response header - the content will be HTML MIME type
-    res.writeHeader('Content-Type': 'text/html');
+    res.writeHeader('Content-Type', 'text/html');
     // Write out the HTTP response body
     res.write('<html><body>' +
     '<h1>Hello Dynamic World Wide Web<h1>'+
