@@ -1,5 +1,6 @@
 const http = require("http");
 const figlet = require("figlet");
+const host = "https://lbbawebtest1.azurewebsites.net"
 const port = process.env.PORT || 80;
 
 const handler = (req, res) => {
@@ -16,7 +17,7 @@ const handler = (req, res) => {
 
 const server = http.createServer(handler);
 
-server.listen(port, err => {
+server.listen(port, host, err => {
   if (err) {
     console.log(err);
   } else {
