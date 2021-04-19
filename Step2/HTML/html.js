@@ -1,5 +1,4 @@
 //const express = require('express');
-const { RSA_NO_PADDING } = require("constants");
 const http = require("http");
 
 const host = 'http://lbbawebtest1.azurewebsites.net';
