@@ -18,7 +18,8 @@ const port = '8080';
 const requestListener = function (req,res){
     
     //HTTP-statuscode "200=OK","404=Error"...
-    res.writeHead(200);
+    res.setCode(200);
+    res.setHeader('Content-Type', 'text/plain');
     
     //Answering to client 
     res.end('TestApp check');
