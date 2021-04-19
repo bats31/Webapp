@@ -1,12 +1,9 @@
 const http=require("http");
-
-const host = 'localhost';
-const port = 8080;
+var port = process.env.PORT || 8080;
 
 //for BestPractices async. Programming
-const fs = require('fs').promises;
 
-const requestListener = function (req,res){
+http.createServer(function (req,res){
     //load data to build the page
     //_dirname = absolut Path
     fs.readFile(__dirname + "/index.html")
@@ -25,9 +22,6 @@ const requestListener = function (req,res){
         res.err(err);
         return;
        });
-};
+}).listen(port);
 
-const server = http.createServer(requestListener);
-server.listen(port, host, () => {
-    console.log('Server is running on http://'+host+':'+port);
-});
+console.log('Server is running on');
