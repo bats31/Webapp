@@ -1,7 +1,7 @@
 //const express = require('express');
 const http = require("http");
 
-const host = 'https://lbbawebtest1.azurewebsites.net';
+const host = 'http://lbbawebtest1.azurewebsites.net';
 const port = process.env.port || 80;
 
 function sayHello(req,res){
