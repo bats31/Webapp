@@ -1,5 +1,5 @@
 const express = require('express')
-const host = "lbbawebtest1.azurewebsites.net"
+const host = "https://lbbawebtest1.azurewebsites.net"
 const app = express()
 const port = 80
 
