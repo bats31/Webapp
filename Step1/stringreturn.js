@@ -9,7 +9,7 @@ const http = require("http");
 const host = 'https://lbbawebtest1.azurewebsites.net';
 
 //Connection on port 8080
-const port = '8080';
+const port = 80;
 
 //callable at 'http://localehost:8080'
 
