@@ -6,12 +6,10 @@ var port = process.env.PORT || 8080;
 http.createServer(function (req,res){
     //load data to build the page
     //_dirname = absolut Path
-    fs.readFile(__dirname + "/index.html")
+    fs.readFile("/index.html")
         
         .then(contents =>{
-
-        res.setHeader("Content-Type","text/html");
-        res.writeHead(200);
+        res.writeHead(200, {"Content-Type": "text/html"});
         res.end(contents);
     })
 
@@ -24,4 +22,4 @@ http.createServer(function (req,res){
        });
 }).listen(port);
 
-console.log('Server is running on');
+console.log('Server is running');
