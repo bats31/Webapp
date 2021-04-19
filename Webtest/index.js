@@ -1,9 +1,10 @@
 const http = require("http");
 const figlet = require("figlet");
-const port = process.env.PORT || 3000;
+const host = "https://lbbawebtest1.azurewebsites.net"
+const port = process.env.PORT || 80;
 
 const handler = (req, res) => {
-  console.log("Server received request. 🔥");
+  console.log("Server received request.");
   figlet("Hello World!", (err, data) => {
     if (err) {
       console.log("Something went wrong...");
