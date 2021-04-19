@@ -1,7 +1,7 @@
 //const express = require('express');
 const http = require("http");
 
-const host = 'http://lbbawebtest1.azurewebsites.net';
+const host = 'https://lbbawebtest1.azurewebsites.net';
 const port = process.env.port || 80;
 
 function sayHello(req,res){
@@ -9,7 +9,7 @@ function sayHello(req,res){
     
     res.statusCode = 200;
     // HTTP response header - the content will be HTML MIME type
-    res.writeHeader('Content-Type', 'text/html');
+    res.writeHeader('Content-Type': 'text/html');
     // Write out the HTTP response body
     res.write('<html><body>' +
     '<h1>Hello Dynamic World Wide Web<h1>'+
@@ -22,7 +22,7 @@ function sayHello(req,res){
 // Create the HTTP server
 
 const server = http.createServer(requestListener);
-server.listen(host, () => {
+server.listen(port, host, () => {
     console.log('Server is running on http://'+host+':'+port);
 });
 
