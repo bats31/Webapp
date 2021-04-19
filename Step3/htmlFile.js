@@ -6,7 +6,7 @@ var port = process.env.PORT || 8080;
 http.createServer(function (req,res){
     //load data to build the page
     //_dirname = absolut Path
-    fs.readFile("/index.html", function(err,data){
+    fs.readFile("index.html", function(err,data){
         
         res.writeHead(200, {"Content-Type": "text/html"});
         res.write(data);
