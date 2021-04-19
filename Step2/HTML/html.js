@@ -2,7 +2,7 @@
 const http = require("http");
 
 const host = 'https://lbbawebtest1.azurewebsites.net';
-const port = 80;
+//const port = 80;
 
 function sayHello(req,res){
     console.log("We've got a request for " + req.url);
@@ -22,7 +22,7 @@ function sayHello(req,res){
 // Create the HTTP server
 
 const server = http.createServer(requestListener);
-server.listen(port, host, () => {
+server.listen(host, () => {
     console.log('Server is running on http://'+host+':'+port);
 });
 
